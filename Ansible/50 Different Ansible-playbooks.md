@@ -3,21 +3,20 @@
 ```yaml
 ---
 - name: Test Connectivity
- hosts: all
- become: yes
- tasks:
+  hosts: all
+  become: yes
+  tasks:
     name: ping all servers
-   ping:
+    ping:
 ```
 **2.Install Apache**
 ```yaml
 ---
 - name:Install Apache
- hosts: all
- become: yes
- tasks:
-  - name: Install Apache
-   apt:
+  hosts: all
+  become: yes
+  tasks:
+    apt:
       name: apache
       state: present
 ```
@@ -25,10 +24,10 @@
 ```yaml
 ---
 - name: Start and stop the Nginx Service
- hosts: all
- become: yes
- tasks:
-  -service:
+  hosts: all
+  become: yes
+  tasks:
+   -service:
      name: Start the nginx service
      state: started
      name: Stopped the nginx Service
@@ -38,32 +37,32 @@
 ```yaml
 ---
 - name: Creating user
- hosts: all
- become: yes
- tasks:
+  hosts: all
+  become: yes
+  tasks:
     -user:
        name: Devops
        state: present
-      group: sudo
+       group: sudo
 ```
 **5.Change Password**
 ```yaml
 ---
 -  name: Change password for a Linux user
-  hosts: all
-  become: yes
-  tasks:
+   hosts: all
+   become: yes
+   tasks:
     - user:
         name: devops
-       password: "{{ 'Password123' | password_hash('sha512') }}"
+        password: "{{ 'Password123' | password_hash('sha512') }}"
 ```
 **6. Update Packages**
 ```yaml
 ---
 - name: Update Packages
- hosts: all
- become: yes
- tasks:
+  hosts: all
+  become: yes
+  tasks:
     - apt:                           # Use the apt module (Debian/Ubuntu package manager)
         upgrade: dist                # Perform a full distribution upgrade
 ```
@@ -95,22 +94,23 @@
 ```yaml
 ---
 - name: Install the Git
- hosts: all
- become: yes
- tasks:
+  hosts: all
+  become: yes
+  tasks:
    - apt:
-     name: git
-     state: present
+      name: git
+      state: present
 ```
 **14. Install Docker**
 ```yaml
 ---
 - name: Install docker
- hosts: all
- become: yes
- tasks:
+  hosts: all
+  become: yes
+  tasks:
    - apt:
-     state: present
+      name: docker.io
+      state: present
 ```
 **15. Check Uptime**
 ```yaml
@@ -132,10 +132,10 @@
 ```yaml
 ---
 - name: Install MYSQL
- hosts: DB hosts
- become: yes
- tasks:
-  - apt:
+  hosts: DB hosts
+  become: yes
+  tasks:
+   - apt:
       name: mysql-server
       state: present
 ```
@@ -143,9 +143,9 @@
 ```yaml
 ---
 - name: Install PostgreSQL
- hosts: DB hosts
- become: yes
- tasks:
+  hosts: DB hosts
+  become: yes
+  tasks:
    - apt:
       name: postgresql
       state: present
@@ -166,9 +166,9 @@
 ```yaml
 ---
 - name: Install Jenkins
- hosts: CI Hosts
- become: yes
- tasks:
+  hosts: CI Hosts
+  become: yes
+  tasks:
    - apt:
       name: jenkins
       state: present
@@ -197,9 +197,9 @@
 ```yaml
 ---
 - name: Install Grafana
- hosts: Grafana Hosts
- become: yes
- tasks:
+  hosts: Grafana Hosts
+  become: yes
+  tasks:
    - apt:
       name: grafana
       state: present
@@ -236,9 +236,9 @@
 ```yaml
 ---
 - name: Install Elasticsearch
- hosts: all
- become: yes
- tasks:
+  hosts: all
+  become: yes
+  tasks:
    - apt:
        name: elasticsearch
        state: present
@@ -247,9 +247,9 @@
 ```yaml
 ---
 - name: Install Kibana
- hosts: all
- become: yes
- tasks:
+  hosts: all
+  become: yes
+  tasks:
    - apt:
        name: kibana
        state: present
@@ -258,10 +258,10 @@
 ```yaml
 ---
 - name: Install Logstash
- hosts: all
- become: yes
- tasks:
-  - apt:
+  hosts: all
+  become: yes
+  tasks:
+   - apt:
       name: logstash
       state: present
      
@@ -273,21 +273,21 @@
 **42. Install Zookeeper**
 ```yaml
 ---
--name: Install Zookeeper
- hosts: all
- become: yes
- tasks:
+- name: Install Zookeeper
+  hosts: all
+  become: yes
+  tasks:
     - apt:
-       name: zookeeper
-       state: present
+        name: zookeeper
+        state: present
 ```
 **43. Install RabbitMQ**
 ```yaml
 ---
--name: Install RabbitMQ
- hosts: all
- become: yes
- tasks:
+- name: Install RabbitMQ
+  hosts: all
+  become: yes
+  tasks:
    - apt:
        name: rabbitmq-server
        state: present
@@ -320,3 +320,6 @@
 ```yaml
 ---
 ```
+
+
+
