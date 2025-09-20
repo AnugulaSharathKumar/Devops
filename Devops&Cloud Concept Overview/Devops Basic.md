@@ -205,6 +205,22 @@ It’s about:
 > real DevOps lies **beneath the surface**. 🌊
 
 ---
+### Learn Core DevOps Tools
+
+Here’s a checklist of essential DevOps tools to start with:
+
+| Category        | Tools                             |
+|----------------|-----------------------------------|
+| OS            | Linux                         |
+| Source Control | Git, GitHub, GitLab               |
+| CI/CD          | Jenkins, GitHub Actions, GitLab CICD|
+| Containers     | Docker                            |
+| Orchestration  | Kubernetes                        |
+| Configuration Mangement            | Ansible                         |
+| IaC            | Terraform                         |
+| Cloud          | AWS or Azure or GCP                   |
+| Scripting            | Shell and Python                         |
+| Monitoring     | Prometheus, Grafana               |
 
 ## 🙌 Keep Exploring
 

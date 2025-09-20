@@ -150,11 +150,6 @@ Virtual machines and hypervisors are foundational to modern DevOps and cloud inf
 
 •	Enable automation and agility
 
-In the next tutorial, we’ll dive into the **practical creation of virtual machines on AWS using both manual and automated methods.**
-
-Stay tuned and continue exploring how DevOps streamlines software delivery through smart infrastructure practices.
-________________________________________
-**Contribute & Connect**
 
 Found this article useful? Star this repo, share your feedback, or contribute to improve it!
 If you have any questions or want to collaborate on open-source DevOps content, feel free to reach out on LinkedIn or GitHub.
