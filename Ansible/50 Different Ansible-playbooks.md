@@ -1,3 +1,6 @@
+
+
+
 ### Ansible-Playbooks
 **1. Ping all host**
 ```yaml
