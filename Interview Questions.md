@@ -7,8 +7,6 @@ DevOps encourages collaboration, automation, and continuous feedback across the 
 
 **2. CI/Cd Follow**
 
-![My Diagram](<img width="1366" height="768" alt="Screenshot (2)" src="https://github.com/user-attachments/assets/8efc0132-772e-4b59-b388-ac128a99ee4b" />)
-
 <img width="1366" height="768" alt="Screenshot (2)" src="https://github.com/user-attachments/assets/4d3507f0-9b96-442c-b34b-38d17ede557b" />
 
 **3. ⚙️ Common DevOps Tools:**
@@ -162,4 +160,12 @@ Syntax:
 find /var/log -name "*.log"
 find / -size +100M
 find . -name "*.tmp" -delete
+```
+**4. scp (Secure Copy)**
+
+Used to copy files securely between local and remote systems (uses SSH).
+Syntax:
+```sh
+scp user@server:/home/user/file.txt /local/path/
+scp file.txt user@server:/home/user/
 ```
