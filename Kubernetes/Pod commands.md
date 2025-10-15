@@ -2,9 +2,13 @@
 __🧩 Basic Pod Commands__
 
 List all pods in current namespace	: kubectl get pods
+
 List pods in all namespaces	: kubectl get pods -A
+
 Get detailed information of a specific pod: 	kubectl describe pod <pod-name>
+
 View YAML definition of a pod: 	kubectl get pod <pod-name> -o yaml
+
 Get pods with wide output (includes node info, IP): 	kubectl get pods -o wide
 
 
@@ -15,9 +19,13 @@ Get pods with wide output (includes node info, IP): 	kubectl get pods -o wide
 
 
 Create a pod from YAML	: kubectl apply -f pod.yaml
+
 Create a pod directly (imperative)	: kubectl run mypod --image=nginx
+
 Delete a pod	: kubectl delete pod <pod-name>
+
 Delete all pods: 	kubectl delete pods --all
+
 Delete pods in a namespace: 	kubectl delete pods --all -n <namespace>
 
 
@@ -26,12 +34,19 @@ Delete pods in a namespace: 	kubectl delete pods --all -n <namespace>
 **🔍 Pod Status & Troubleshooting**
 
 Check pod status	: kubectl get pod <pod-name>
+
 Get logs of a pod	: kubectl logs <pod-name>
+
 Get logs of a specific container in a pod	: kubectl logs <pod-name> -c <container-name>
+
 Stream logs continuously : 	kubectl logs -f <pod-name>
+
 Describe pod for debugging (events, issues) : 	kubectl describe pod <pod-name>
+
 Get previous container logs (after crash) : 	kubectl logs -p <pod-name>
+
 List pods with a label : 	kubectl get pods -l <label-key>=<label-value>
+
 Watch live pod updates	: kubectl get pods -w
 
 
@@ -42,9 +57,13 @@ Watch live pod updates	: kubectl get pods -w
 
 
 Get inside pod shell (bash)	: kubectl exec -it <pod-name> -- /bin/bash
+
 Execute a single command inside pod	: kubectl exec <pod-name> -- ls /app
+
 Copy files to pod: 	kubectl cp ./file.txt <pod-name>:/tmp/
+
 Copy files from pod	: kubectl cp <pod-name>:/tmp/file.txt ./
+
 Port forward from pod to local	: kubectl port-forward <pod-name> 8080:80
 
 
@@ -55,8 +74,11 @@ Port forward from pod to local	: kubectl port-forward <pod-name> 8080:80
 
 
 Add label to a pod : 	kubectl label pod <pod-name> env=dev
+
 View pod labels	 : kubectl get pods --show-labels
+
 Filter pods by label	 : kubectl get pods -l env=dev
+
 Remove label: 	kubectl label pod <pod-name> env-
 
 
@@ -67,6 +89,9 @@ Remove label: 	kubectl label pod <pod-name> env-
 
 
 Restart pods in deployment : 	kubectl rollout restart deployment <deployment-name>
+
 Delete evicted pods : 	`kubectl get pods
+
 Check pod events: 	kubectl get events --sort-by=.metadata.creationTimestamp
+
 Check which node pod is running on	: kubectl get pod <pod-name> -o  wide
