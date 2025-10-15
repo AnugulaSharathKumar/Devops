@@ -1,5 +1,5 @@
 
-**🧩 Basic Pod Commands**
+__🧩 Basic Pod Commands__
 
 List all pods in current namespace	: kubectl get pods
 List pods in all namespaces	: kubectl get pods -A
